@@ -71,10 +71,10 @@ public class CardTrick {
           }
          
           if(won){
-              System.out.println(Congratulations! You withdrew the lucky Card );
+              System.out.println("Congratulations! You withdrew the lucky Card ");
           }
           else{
-          System.out.println(Sorry! Better luck next time);
+          System.out.println("Sorry! Better luck next time");
               
           }
           }
