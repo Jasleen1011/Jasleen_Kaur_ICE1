@@ -23,13 +23,13 @@ public class CardTrick {
         Card[] magicHand = new Card[7];
         
         for (int i = 0; i< magicHand.length;i++) {
-            var c = new Card();
+            var cards = new Card();
             Random random = new Random();
             int value = random.nextInt((13) + 1);
-            c.setValue(value);//c.setValue(insert call to random number generator here)
+            cards.setValue(value);//c.setValue(insert call to random number generator here)
             int suit = random.nextInt(4);
-            c.setSuit(Card.SUITS[suit]); //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            magicHand[i] = c;
+            cards.setSuit(Card.SUITS[suit]); //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            magicHand[i] = cards;
         }
          Scanner scanner = new Scanner(System.in);
          
@@ -60,13 +60,15 @@ public class CardTrick {
           }
           Card luckyCard = new Card();
           luckyCard.setValue(13);
-          luckycard.setSuits("Spades");
+          luckycard.setSuit("Spades");
      
           boolean won = false;
-          for(Card card : magicHand){
-              id(card.getValue() == luckyCard.getValue() && card.getsSuits.equals(luckyCard.getSuit())){
-               found = true;
-                  break;
+          for( var card1 : magicHand){
+              if(card1.getSuit().equals(luckyCard.getSuit())){
+                  if (card1.getValue() == luckyCard.getValue()) {
+                      found = true;
+                      break;
+                  }
               }
           }
          
@@ -92,6 +94,16 @@ Oops! Your card is not present in the magic hand
 Oops! Your card is not present in the magic hand
 Oops! Your card is not present in the magic hand
 */
+    }
+
+    private static class luckycard {
+
+        private static void setSuit(String spades) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        public luckycard() {
+        }
     }
     
 }
