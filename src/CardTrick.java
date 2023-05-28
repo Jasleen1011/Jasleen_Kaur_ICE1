@@ -58,7 +58,26 @@ public class CardTrick {
           else{
               System.out.println("Oops! Your card is not present in the magic hand") ;
           }
-      }
+          Card luckyCard = new Card();
+          luckyCard.setValue(13);
+          luckycard.setSuits("Spades");
+     
+          boolean won = false;
+          for(Card card : magicHand){
+              id(card.getValue() == luckyCard.getValue() && card.getsSuits.equals(luckyCard.getSuit())){
+               found = true;
+                  break;
+              }
+          }
+         
+          if(won){
+              System.out.println(Congratulations! You withdrew the lucky Card );
+          }
+          else{
+          System.out.println(Sorry! Better luck next time)
+              ;
+          }
+          }
     
         /* Results:
 Please enter the value between 1 and 13 = 
